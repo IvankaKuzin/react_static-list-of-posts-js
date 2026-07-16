@@ -1,4 +1,8 @@
-export const CommentInfo = ({ comment }) => {
+export const CommentInfo = ({ postId, comment }) => {
+  if (postId !== undefined && comment.postId !== postId) {
+    return null;
+  }
+
   return (
     <div className="CommentInfo">
       <div className="CommentInfo__title">
