@@ -5,7 +5,7 @@ import usersFromServer from '../../api/users.json';
 
 export const PostInfo = ({ post }) => {
   const author =
-    post.user || usersFromServer.find((person) => person.id === post.userId);
+    post.user || usersFromServer.find(person => person.id === post.userId);
 
   return (
     <div className="PostInfo">
