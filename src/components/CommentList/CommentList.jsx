@@ -1,10 +1,8 @@
 import './CommentList.scss';
-import commentsFromServer from '../../api/comments.json';
 import { CommentInfo } from '../CommentInfo/CommentInfo';
 
-export const CommentList = ({ comments, postId }) => {
-  const commentsToRender =
-    comments ?? commentsFromServer.filter(comment => comment.postId === postId);
+export const CommentList = ({ comments }) => {
+  const commentsToRender = comments || [];
 
   if (commentsToRender.length === 0) {
     return (
@@ -17,7 +15,7 @@ export const CommentList = ({ comments, postId }) => {
   return (
     <div className="CommentList">
       {commentsToRender.map(comment => (
-        <CommentInfo key={comment.id} postId={postId} comment={comment} />
+        <CommentInfo key={comment.id} comment={comment} />
       ))}
     </div>
   );

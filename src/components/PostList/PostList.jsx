@@ -1,9 +1,8 @@
-import postsFromServer from '../../api/posts.json';
 import { PostInfo } from '../PostInfo/PostInfo';
 
-export const PostList = () => (
+export const PostList = ({ posts }) => (
   <div className="PostList">
-    {postsFromServer.map(post => (
+    {posts.map(post => (
       <PostInfo key={post.id} post={post} />
     ))}
   </div>

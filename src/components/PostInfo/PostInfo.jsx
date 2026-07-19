@@ -23,7 +23,7 @@ export const PostInfo = ({ post }) => {
 
       <hr />
 
-      <CommentList comments={post.comments} postId={post.id} />
+      <CommentList comments={post.comments} />
     </div>
   );
 };
