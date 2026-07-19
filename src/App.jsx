@@ -1,5 +1,6 @@
 import './App.scss';
 
+import { Header } from './components/Header/Header';
 import { PostList } from './components/PostList/PostList';
 import postsFromServer from './api/posts.json';
 import usersFromServer from './api/users.json';
@@ -14,7 +15,7 @@ export const App = () => {
 
   return (
     <section className="App">
-      <h1 className="App__title">Static list of posts</h1>
+      <Header />
 
       <PostList posts={posts} />
     </section>
